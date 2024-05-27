@@ -1,0 +1,65 @@
+.grid {
+    display: grid;
+    width: 600px;
+    height: 500px;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+}
+
+.title {
+    grid-area: 1 / 1 / 2 / 6;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    gap: 5px;
+}
+
+.site-title {
+    grid-area: 1 / 1 / 2 / 4;
+    background-color: gold;
+}
+
+.nav {
+    background-color: pink;
+}
+
+.post-title {
+    grid-area: 2 / 1 / 3 / 5;
+    background-color: aqua;
+}
+
+.post-meta {
+    grid-area: 3 / 1 / 8 / 2;
+    background-color: lightgreen;
+}
+
+.main-content {
+    grid-area: 3 / 2 / 5 / 5;
+    background-color: lightgray;
+}
+
+.main-content-image {
+    grid-area: 5 / 2 / 8 / 5;
+    background-color: yellow;
+}
+
+.side-bar {
+    grid-area: 2 / 5 / 4 / 6;
+    background-color: orange;
+}
+
+.ads {
+    grid-area: 4 / 5 / 6 / 6;
+    background-color: green;
+}
+
+.other-stuffs {
+    grid-area: 6 / 5 / 8 / 6;
+    background-color: blueviolet;
+}
+
+.footer {
+    grid-area: 8 / 1 / 9 / 6;
+    background-color: dimgray;
+}
