@@ -1,0 +1,64 @@
+.container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.container > div {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.l1 {
+    background-color: #19A68C;
+    animation: looper 2s ease-in-out infinite 0s;
+}
+
+.l2 {
+    background-color: #F63D3A;
+    animation: looper 2s ease-in-out infinite -1.5s;
+}
+
+.l3 {
+    background-color: #FDA543;
+    animation: looper 2s ease-in-out infinite -1s;
+}
+
+.l4 {
+    background-color: #193B48;
+    animation: looper 2s ease-in-out infinite -0.5s;
+}
+
+@keyframes looper {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    20% {
+        transform: translate(200px, 0px);
+    }
+    25% {
+        transform: translate(200px, 0px);
+    }
+    45% {
+        transform: translate(200px, 200px);
+    }
+    50% {
+        transform: translate(200px, 200px);
+    }
+    70% {
+        transform: translate(0px, 200px);
+    }
+    75% {
+        transform: translate(0px, 200px);
+    }
+    95% {
+        transform: translate(0px, 0px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
