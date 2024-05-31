@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: conic-gradient(
+        from var(--angle),
+        black 0% 20%,
+        transparent 20% 50%,
+        black 50% 70%,
+        transparent 70% 100%
+    );
+    /* background: conic-gradient(from var(--angle), black 0%, transparent 50%); */
+    border-radius: 50%;
+    animation: spin 5s ease-in-out infinite;
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 5px;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 40deg;
+}
+
+@keyframes spin {
+    0% {
+        --angle: 30deg;
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        --angle: calc(-360deg * 5 + 30deg);
+        opacity: 0;
+    }
+}
